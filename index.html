@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sofyane OS - Access Granted</title>
+    <style>
+        body { background-color: black; color: #00FF00; font-family: 'Courier New', monospace; overflow: hidden; }
+        .console { padding: 20px; font-size: 1.2rem; }
+        .cursor { display: inline-block; width: 10px; height: 20px; background: #00FF00; animation: blink 0.7s infinite; }
+        @keyframes blink { 0% { opacity: 0; } 50% { opacity: 1; } 100% { opacity: 0; } }
+        .line { margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+    <div class="console" id="console">
+        <div class="line">>>> INITIALIZING SOFYANE_SYSTEM_V3... [OK]</div>
+        <div class="line">>>> BYPASSING FIREWALL... [DONE]</div>
+        <div class="line">>>> CONNECTING TO REMOTE DEVICE... [SUCCESS]</div>
+        <div class="line" style="color: red;">>>> WARNING: UNAUTHORIZED ACCESS DETECTED!</div>
+        <div class="line">>>> Hello, I'm Robot dyal Sofyan, matkhafch... <span class="cursor"></span></div>
+    </div>
+
+    <script>
+        alert("ACCESS GRANTED: SOFYANE IS WATCHING! 🤖");
+        // كود باش تزيد السطور بوحدهم بحال إلا كيتكتبوا دابا
+        setInterval(() => {
+            const lines = [">>> DATA ENCRYPTION: 100%", ">>> SCANNING PORTS...", ">>> TARGET: OLD_PHONE_88", ">>> SYSTEM STATUS: SECURE"];
+            const div = document.createElement("div");
+            div.className = "line";
+            div.innerHTML = lines[Math.floor(Math.random() * lines.length)];
+            document.getElementById("console").appendChild(div);
+        }, 1500);
+    </script>
+</body>
+</html>
+
